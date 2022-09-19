@@ -16,6 +16,10 @@ app.use('/api/products', router);
 //static images folder
 app.use('/images', express.static('./images'));
 
+app.get('/', (req, res) => {
+	res.send('Server is ready');
+});
+
 
 const PORT = process.env.PORT || 8080;
 
