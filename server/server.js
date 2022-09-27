@@ -11,6 +11,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use(cors());
+app.use(express.static("public"))
 
 const router = require('./routes/productRouter');
 app.use('/api/products', router);
